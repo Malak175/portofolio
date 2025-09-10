@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f5f7fa;
+  color: #2d3748;
+  line-height: 1.6;
+}
+
+/* Sidebar */
+.fixed-sidebar {
+  width: 250px;
+  background: linear-gradient(135deg, #2b6cb0, #1a4971);
+  color: #fff;
+  min-height: 100vh; 
+  max-height: 100vh; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll; 
+  scrollbar-width: thin; 
+  scrollbar-color: #a3bffa transparent;
+  z-index: 1000; 
+}
+.sidebar-nav {
+  padding-bottom: 20px; 
+}
+.fixed-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.fixed-sidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.fixed-sidebar::-webkit-scrollbar-thumb {
+  background-color: #a3bffa;
+  border-radius: 4px;
+}
+.fixed-sidebar::-webkit-scrollbar-thumb:hover {
+  background-color: #fff;
+}
+.fixed-sidebar > * {
+  min-width: 0; 
+}
+.sidebar-nav a {
+  color: #e2e8f0;
+  text-decoration: none;
+  padding: 5px 0;
+  display: block;
+}
+.sidebar-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.profile-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+}
+.profile-img:hover {
+  transform: scale(1.05);
+}
+.social-links a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0 0.75rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-links a:hover {
+  color: #a3bffa;
+  transform: translateY(-3px);
+}
+
+/* Main Content */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+  background: #fff;
+}
+.section {
+  padding: 50px 0;
+}
+.section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.section h2::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background: #2b6cb0;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(135deg, #2b6cb0 0%, #9f7aea 100%);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+.hero .typed {
+  color: #a3bffa;
+  font-weight: 600;
+}
+
+/* About */
+.info-list li {
+  display: flex;
+  align-items: center;
+}
+.info-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-right: 10px;
+  min-width: 80px;
+}
+.info-list a {
+  color: #2b6cb0;
+  text-decoration: none;
+}
+.info-list a:hover {
+  text-decoration: underline;
+}
+.sub-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2b6cb0;
+}
+.education-list h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.education-list p {
+  margin: 0;
+  color: #718096;
+}
+
+
+/* Stats Section Styles */
+.stats-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+  padding: 4rem 0;
+}
+.stat-card {
+  background: #fff;
+  padding: 2rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+.stat-label {
+  font-size: 1.1rem;
+  color: #4a5568;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Services Section Styles */
+.services-section {
+  background: #fff;
+  padding: 4rem 0;
+}
+.service-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Skills Section Styles */
+.skills-section {
+  background: #f7fafc;
+  padding: 4rem 0;
+}
+.progress-bar {
+  background: #2b6cb0;
+  font-size: 0.75rem;
+  color: #fff;
+}
+
+/* Portfolio Section Styles */
+.portfolio-section {
+  background: #fff;
+  padding: 4rem 0;
+}
+.filter-btns .btn {
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.filter-btns .btn.active,
+.filter-btns .btn:hover {
+  background: #2b6cb0;
+  color: #fff;
+}
+.portfolio-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+.card-text {
+  font-size: 0.95rem;
+  color: #718096;
+  min-height: 60px;
+}
+.btn-primary {
+  background-color: #2b6cb0;
+  border-color: #2b6cb0;
+}
+.btn-primary:hover {
+  background-color: #1a4971;
+  border-color: #1a4971;
+}
+
+/* Testimonials Section Styles */
+.testimonials-section {
+  background: linear-gradient(135deg, #f7fafc 0%, #e2e8f0 100%);
+  padding: 4rem 0;
+}
+.testimonial-card {
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Contact Section Styles */
+.contact-section {
+  background: #fff;
+  padding: 4rem 0;
+}
+.contact-info a {
+  color: #2b6cb0;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Back to Top */
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.1rem;
+}
+.btn-primary {
+  background-color: #2b6cb0;
+  border-color: #2b6cb0;
+}
+.btn-primary:hover {
+  background-color: #1a4971;
+  border-color: #1a4971;
+}
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+.btn-outline-secondary:hover {
+  color: #fff;
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+}
+
+
+
